@@ -4,6 +4,7 @@ import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import {AiOutlineShareAlt,AiOutlineSearch} from 'react-icons/ai'
 import myContext from "../../context/data/myContext"
+import Search from '../search/search'
 
 export default function Nav(){
   const [openNav, setOpenNav]= React.useState(false);
@@ -64,7 +65,7 @@ export default function Nav(){
     </div>
 
     <div>
-      <AiOutlineSearch size={20} color='white'/>
+      <Search/>
     </div>
 
     <div>
