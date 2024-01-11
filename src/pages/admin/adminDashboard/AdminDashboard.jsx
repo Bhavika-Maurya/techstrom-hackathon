@@ -2,12 +2,20 @@ import React from 'react'
 import { useContext } from 'react'
 import Layout from '../../../components/layout/Layout'
 import { Button } from '@material-tailwind/react'
-import { Link } from 'react-router-dom'
+import { Link , useNavigate} from 'react-router-dom'
 import myContext from '../../../context/data/myContext'
 
 function AdminDashboard() {
   const context = useContext(myContext);
   const {mode}= context;
+ 
+  const navigate = useNavigate();
+
+  const logout=()=>{
+    localStorage.clear();
+    navigate('/')
+  }
+
 
   return (
     <Layout>
@@ -25,7 +33,7 @@ function AdminDashboard() {
             </div>
             </Link>
             <div className='mb-2'>
-            <Button className='px-8 py-2'>Logout</Button>
+            <Button className='px-8 py-2' onClick={logout}>Logout</Button>
             </div>
            </div>
           </div>

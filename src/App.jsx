@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom'
 import React from 'react'
 import Home from "./pages/home/Home";
 import Blog from "./pages/blog/Blog";
@@ -11,6 +11,7 @@ import MyState from './context/data/myState';
 import { Toaster } from 'react-hot-toast';
 
 
+
 function App() {
   return (
     <MyState>
@@ -21,8 +22,17 @@ function App() {
         <Route path='/allBlogs' element={<AllBlogs/>}/>
         <Route path='/blogInfo/:id' element={<BlogInfo/>}/>
         <Route path='/AdminLogin' element={<AdminLogin/>}/>
-        <Route path='/adminDashboard' element={<AdminDashboard/>}/>
-        <Route path='/Createblog' element={<CreateBlog/>}/>
+
+        <Route path='/adminDashboard' element={<ProtectedRouteForAdmin>
+          <AdminDashboard/>
+        </ProtectedRouteForAdmin>
+        }/>
+
+        <Route path='/Createblog' element={
+          <ProtectedRouteForAdmin>
+                <CreateBlog/>
+          </ProtectedRouteForAdmin>
+        }/>
       </Routes>
       <Toaster/>
      </Router>
@@ -31,3 +41,13 @@ function App() {
 }
 
 export default App
+
+export const ProtectedRouteForAdmin=({children})=>{
+  const admin = JSON.parse(localStorage.getItem('admin'))
+  if(admin?.user?.email === "test@gmail.com"){
+    return children
+  }
+  else{
+    return <Navigate to = {'/AdminLogin'}/>
+  }
+}
