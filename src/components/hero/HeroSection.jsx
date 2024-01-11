@@ -20,7 +20,7 @@ function HeroSection() {
       <h1 className='text-3xl text-orange font-bold'>Katha</h1>
       </div>
       <p style={{}} className='sm:text-3xl text-xl font-extralight sm:mx-auto'>
-        A Tapastry of indian knowlwdge and culture
+      Chronicles of Culture
         </p>
     </div>
     </main>
