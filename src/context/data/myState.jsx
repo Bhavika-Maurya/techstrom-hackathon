@@ -3,15 +3,15 @@ import myContext from './myContext'
 
 
 function MyState(props){
-const [mode, setMode] = useState('Light');
+const [mode, setMode] = useState('light');
 const toggleMode =()=>{
-    if (mode === 'Light'){
+    if (mode === 'light'){
         setMode('dark');
         document.body.style.backgroundColor = 'rgb(17, 24, 39)';
     }
 
     else{
-        setMode('Light');
+        setMode('light');
         document.body.style.backgroundColor = 'white';
     }
 }
