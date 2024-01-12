@@ -37,7 +37,7 @@ export default function AdminLogin(){
       <CardHeader color='orange' floated={false} shadow={false} className='m-0 grid place-items-center rounded-b-none py-8 px-4 text-center'>
      <div className='mb-4 rounded-full border border-white/10 bg-white/10 p-2 text-white'>
       <div className='flex justify-center'>
-        <img src={'src/assets/tree-736885_1280 (1).jpg'} className='h-20 w-20'/>
+        <img src={'https://cdn-icons-png.flaticon.com/128/3135/3135716.png'} className='h-20 w-20'/>
       </div>
      </div>
      <Typography variant="h4">

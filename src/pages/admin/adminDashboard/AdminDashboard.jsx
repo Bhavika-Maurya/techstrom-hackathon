@@ -27,7 +27,7 @@ function AdminDashboard() {
                     <div className="left">
                         <img
                             className=" w-40 h-40  object-cover rounded-full border-2 border-pink-600 p-1"
-                            src={'https://cdn-icons-png.flaticon.com/128/3135/3135715.png'} alt="profile"
+                            src={'https://cdn-icons-png.flaticon.com/128/3135/3135716.png'} alt="profile"
                         />
                     </div>
                     <div className="right">
@@ -35,32 +35,17 @@ function AdminDashboard() {
                             className='text-center font-bold text-2xl mb-2'
                             style={{ color: mode === 'dark' ? 'white' : 'black' }}
                         >
-                            Kamal Nayan Upadhyay
+                            Bhavika
                         </h1>
 
                         <h2
                             style={{ color: mode === 'dark' ? 'white' : 'black' }} className="font-semibold">
-                            Software Developer
-                        </h2>
-                        <h2
-                            style={{ color: mode === 'dark' ? 'white' : 'black' }} className="font-semibold">knupadhyay784@gmail.com
-                        </h2>
-                        <h2
-                            style={{ color: mode === 'dark' ? 'white' : 'black' }} className="font-semibold">
-                            <span>Total Blog : </span>  15
+                            <span>Total Blog : </span>  10
                         </h2>
                         <div className=" flex gap-2 mt-2">
                             <Link to={'/createblog'}>
                                 <div className=" mb-2">
                                     <Button
-                                        style={{
-                                            background: mode === 'dark'
-                                                ? 'rgb(226, 232, 240)'
-                                                : 'rgb(30, 41, 59)',
-                                            color: mode === 'dark'
-                                                ? 'black'
-                                                : 'white'
-                                        }}
                                         className='px-8 py-2'
                                     >
                                         Create Blog

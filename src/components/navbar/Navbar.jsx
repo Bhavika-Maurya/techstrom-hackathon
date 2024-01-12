@@ -48,7 +48,7 @@ export default function Nav(){
 
   return (
     <>
-    <Navbar className='sticky inset-0 z-20 h-max max-w-full border-none rounded-none py-2 px-4 lg:px-8 lg:py-2' style={{background:mode ==='dark'?'rgb(30, 41, 59)': 'orange'}} >
+    <Navbar className='sticky inset-0 z-20 h-max max-w-full border-none rounded-none py-2 px-4 lg:px-8 lg:py-2' style={{background:mode ==='dark'?'rgb(30, 41, 59)': '#BA2F16'}} >
     <div className='flex items-center justify-between text-black-900'>
     <Link to= {'/'}>
       <Typography
@@ -56,8 +56,10 @@ export default function Nav(){
       className=''
       style={{}}
       >
-        <img className='' src=''/>
-        <span>Katha</span>
+        {/* <img className='' src={'.\assets\download.jpg'}/> */}
+        <div className=' font-extrabold'>
+        <span > Katha</span>
+        </div>
       </Typography>
     </Link>
 
@@ -79,7 +81,7 @@ export default function Nav(){
       <div className=''>
       <Avatar 
       key={1}
-      src={''}
+      src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE0Xgkd_4vXncTHlgg48zeDpV6fKMWNAmsEwNiAA35sg&s'}
       alt='avatar'
       withBorder={true}
       className='p-0.5 text-red-500 w-10 h-10'

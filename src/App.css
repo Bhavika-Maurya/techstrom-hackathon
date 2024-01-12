@@ -1,1 +1,18 @@
 /* #BA2F16 */
+
+.newfont{
+    margin-left: 27vh;
+    color: #BA2F16 ;
+    font-style: italic;
+}
+
+.newfont h1{
+    font-size: 40px;
+    color: #BA2F16;
+    
+}
+
+.newfont p{
+    font-size: 35px;
+}
+

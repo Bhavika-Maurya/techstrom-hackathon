@@ -5,7 +5,7 @@ function Footer() {
     const context = useContext(myContext);
     const { mode } = context;
     return (
-        <footer className="body-font" style={{ background: mode === 'dark' ? 'rgb(30, 41, 59)' : 'orange' }}>
+        <footer className="body-font" style={{ background: mode === 'dark' ? 'rgb(30, 41, 59)' : '#BA2F16' }}>
            
             <div className="container px-5 py-3 mx-auto flex items-center sm:flex-row flex-col">
                
