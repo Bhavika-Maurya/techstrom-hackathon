@@ -46,7 +46,7 @@ function BlogPostCard() {
                       {/* Blog Thumbnail  */}
                       <img 
                       onClick={()=> navigate(`/blogInfo/${id}`)}
-                      className=" w-full" src={thumbnail} alt="blog" />
+                      className=" w-full" style={{ maxHeight: '300px'}} src={thumbnail} alt="blog" />
 
                       {/* Top Items  */}
                       <div className="p-6">
@@ -74,7 +74,8 @@ function BlogPostCard() {
                             ? 'rgb(226, 232, 240)'
                             : ' rgb(30, 41, 59)'
                         }}>
-                        {item.blogs.description}
+                        {item.blogs && item.blogs.description}
+
                         </p>
                       </div>
                     </div>
